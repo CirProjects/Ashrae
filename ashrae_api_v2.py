@@ -16,21 +16,9 @@ def fetch_extreme_values_for_station(station_id):
     }
     
     headers = {
-        'Accept': '/',
-        'Accept-Encoding': 'gzip, deflate, br, zstd',
-        'Accept-Language': 'en-US,en;q=0.9',
-        'Content-Type': 'application/x-www-form-urlencoded',
-        'Cookie': 'ashrae_version=2021; si_ip=SI; show_station=off; help_window=off; attention_2=on; ext_name=ojplmecpdpgccookcobabopnaifgidhf; psi_calc=off',
-        'Origin': 'https://ashrae-meteo.info',
-        'Referer': 'https://ashrae-meteo.info/v2.0/',
-        'Sec-Ch-Ua': '"Not/A)Brand";v="8", "Chromium";v="126", "Microsoft Edge";v="126"',
-        'Sec-Ch-Ua-Mobile': '?0',
-        'Sec-Ch-Ua-Platform': '"Windows"',
-        'Sec-Fetch-Dest': 'empty',
-        'Sec-Fetch-Mode': 'cors',
-        'Sec-Fetch-Site': 'same-origin',
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 Edg/126.0.0.0'
-    }
+    "Accept": "*/*",
+    "Referer": "https://ashrae-meteo.info/v2.0/"
+}
     
     try:
         response = requests.post(url, headers=headers, data=payload)
@@ -76,21 +64,9 @@ def get_weather_data(lat, long):
     url = "https://ashrae-meteo.info/v2.0/request_places.php"
 
     headers = {
-        "Accept": "*/*",
-        "Accept-Encoding": "gzip, deflate, br, zstd",
-        "Accept-Language": "en-US,en;q=0.9",
-        "Content-Type": "application/x-www-form-urlencoded",
-        "Origin": "https://ashrae-meteo.info",
-        "Referer": "https://ashrae-meteo.info/v2.0/",
-        "Sec-Ch-Ua": '"Not/A)Brand";v="8", "Chromium";v="126", "Microsoft Edge";v="126"',
-        "Sec-Ch-Ua-Mobile": "?0",
-        "Sec-Ch-Ua-Platform": '"Windows"',
-        "Sec-Fetch-Dest": "empty",
-        "Sec-Fetch-Mode": "cors",
-        "Sec-Fetch-Site": "same-origin",
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 Edg/126.0.0.0",
-        "Cookie": "ashrae_version=2021; si_ip=SI; show_station=off; help_window=off; attention_2=on; ext_name=ojplmecpdpgccookcobabopnaifgidhf; psi_calc=off"
-    }
+    "Accept": "*/*",
+    "Referer": "https://ashrae-meteo.info/v2.0/"
+}
 
     payload = {
         "lat": lat,
