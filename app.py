@@ -26,8 +26,8 @@ def fetch_extreme_values_for_station(station_id):
         if response.status_code == 200:
             response_text = response.text
             
-            pattern_min = r'"extreme_annual_DB_mean_min":"([\d.]+)"'
-            pattern_max = r'"extreme_annual_DB_mean_max":"([\d.]+)"'
+            pattern_min = r'"extreme_annual_DB_mean_min":"(-?[\d.]+)"'
+            pattern_max = r'"extreme_annual_DB_mean_max":"(-?[\d.]+)"'
             
             match_min = re.search(pattern_min, response_text)
             match_max = re.search(pattern_max, response_text)
